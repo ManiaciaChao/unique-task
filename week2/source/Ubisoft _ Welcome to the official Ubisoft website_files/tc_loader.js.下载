@@ -1,6 +1,0 @@
-var a = Math.random() * 10000000000000;
-
-var script = document.createElement("script");
-script.setAttribute("type", "text/javascript");
-script.setAttribute("src", "//ubistatic2-a.akamaihd.net/worldwide_analytics/tagcommander/UbisoftClub/Overlay/tc_scripts_ClubOverlay.js?rand=" + a);
-document.body.appendChild(script);
