@@ -1,0 +1,328 @@
+/*
+    1. General
+    2. Layout
+    3. Component
+
+*/
+
+/*
+    1.  General
+            L Fonts 
+*/
+
+@font-face {
+    font-family: 'UbisoftSans';
+    src: url('assets\\fonts\\UbisoftSans-Regular.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UbisoftSans';
+    src: url('assets\\fonts\\UbisoftSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*
+    2.  Layout
+            L Body
+*/
+
+body {
+    font-family: UbisoftSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    line-height: 1.42857;
+}
+
+body p {
+    font-size: 14px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a {
+    color: rgb(51, 122, 183);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.page-wrapper {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    z-index: -999;
+}
+
+.container {
+    display: block;
+    width: 100%;
+}
+
+section.screen {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: #FFF;
+    border-bottom: #000 1px solid;
+    z-index: -5;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.back-banner {
+    position: absolute;
+    top: 0;
+    left: 17%;
+    background: #018aff;
+    width: 66%;
+    height: 100%;
+    z-index: -3;
+}
+
+.Heading {
+    position: relative;
+    font-family: UbisoftSans-Bold, UbisoftSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0px;
+    padding: 28px;
+    color: #FFF;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.sub-heading {
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    color: #5a5a5a;
+    font-size: 17px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+}
+
+/*
+    3.  Component
+            L Navbar
+*/
+
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background: #000;
+    text-align: center;
+}
+
+.navbar-left,
+.navbar-right {
+    flex: 2;
+}
+
+.navbar-center {
+    flex: 1 auto;
+}
+
+.navbar-logo {
+    display: block;
+    position: relative;
+    margin-left: -14px;
+    float: left;
+    padding: 10px 20px 15px 14px;
+    z-index: 1;
+}
+
+.navbar-logo>img {
+    width: 95px;
+    margin-left: 24px;
+}
+
+.navbar-list {
+    display: flex;
+}
+
+.navbar-list>li {
+    flex: 1 auto;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    color: rgb(204, 204, 204);
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    line-height: 50px;
+    display: block;
+}
+
+.navbar-list>li>a {
+    color: rgb(204, 204, 204);
+}
+
+.HeaderGlobal__control.--search.--active {
+    position: relative;
+    z-index: 1500;
+    display: block;
+    box-sizing: content-box;
+}
+
+.SearchButton {
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 20px;
+    transition: all .5s ease-out;
+}
+
+.SearchButton img {
+    width: 18px !important;
+}
+
+.SearchHud__body {
+    top: 64px;
+    right: 132px;
+    position: absolute;
+    width: 0px;
+    transition: all .5s ease-out;
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 1000;
+    -webkit-box-shadow: 0 8px 34px -12px rgba(50, 50, 93, .12), 0 12px 20px -10px rgba(0, 0, 0, .08);
+    box-shadow: 0 8px 34px -12px rgba(50, 50, 93, .12), 0 12px 20px -10px rgba(0, 0, 0, .08);
+}
+
+.login-avatar {
+    margin-left: 18px;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAACSCAYAAACue5OOAAAAGXRFW…Lb3v8fO9HG5bivLQAAAAAAAAAAAAAAAAAAAAAAAEAy/BJgALflp8RlzZKkAAAAAElFTkSuQmCC) 50% no-repeat #edeef0;
+    background-size: cover;
+    margin: 14px;
+}
+
+.SearchHud__search-input {
+    width: 100%;
+    padding: 10px 15px;
+    color: #363636;
+    font-family: UbisoftSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: .07em;
+    -webkit-font-smoothing: antialiased;
+    background: #fff;
+    border: none;
+    outline: none;
+    -webkit-transition: all .25s;
+    -o-transition: .25s all;
+    transition: all .25s;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.footer-container {
+    display: block;
+    flex-direction: row;
+    position: absolute;
+    /* bottom: -50px; */
+    height: 30vh;
+    width: 100%;
+    background: #1d1e22;
+    font-family: UbisoftSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+.footer-container p {
+    color: #888787;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background: #000;
+    text-align: center;
+}
+
+.social-container p {
+    flex: 1.8;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.social-container ul,
+li {
+    display: block;
+}
+
+.social-set {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.social-logo {
+    flex: 1;
+    min-height: 32px;
+    padding: 0 8px;
+}
+
+.social-logo img {
+    height: 32px;
+    width: auto;
+}
+
+.info-container {
+    color: #888787;
+    display: flex;
+    width: 100%;
+}
+
+.info-col {
+    padding: 0 64px;
+    flex: 1;
+    display: flex;
+}
+
+.info-col ul,
+li {
+    display: block;
+    color: #FFF;
+    letter-spacing: 0.05ch;
+}
+
+.info-col ul {
+    flex: 1 auto;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 0 32px;
+    font-size: 15px;
+}
+
+.info-col li {}
+
+.footer-download {
+    flex: 1;
+    margin: 30px 0;
+    text-transform: capitalize;
+    color: #888787;
+}
+
+.inverted {
+    filter: invert(100%);
+}

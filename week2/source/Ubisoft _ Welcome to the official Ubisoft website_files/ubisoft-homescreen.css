@@ -1,0 +1,48 @@
+/* continent css file */
+
+@media (min-width: 1200px) {
+	.emea .container {
+		width: 1300px;
+	}
+}
+
+@media (min-width: 768px) {
+	.emea .LatestNews__category-ul {
+		display: grid;
+		grid-template-columns: repeat(6,1fr);
+	}
+
+	.emea .SlidePostE3__buttons-btn.\--alternate.desktop{
+		background-color:rgba(255,255,255,0.7);
+	}
+
+	.emea .FooterGlobal__left ul .FooterGlobal__privacy-link:first-of-type{
+		margin-right:0;
+		float:none;
+	}
+}
+
+.ncsa .SlidePostE3__h3{
+	display:none;
+}
+
+.emea .FooterGlobal__left ul .FooterGlobal__privacy-link:after{
+	content:none;
+}
+
+.SlideNavPostE3__nav-img.selected { 
+	cursor:default;
+}
+
+
+.ncsa .LatestNews__category-ul{
+	display:inline;
+}
+
+@media (min-width: 1600px){
+.ncsa .LatestNews__category-ul li {
+    font-size: 19.5px;
+    padding: 40px 20px 0px 20px;
+
+}
+}

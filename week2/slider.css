@@ -1,0 +1,114 @@
+.slider-wrapper {
+    /*height: 594.438px;*/
+    height: 45vw;
+    width: 1000%;
+    touch-action: pan-y;
+    background: #333;
+    margin-left: 0;
+    transition: margin-left 0.75s cubic-bezier(.3, .8, .1, .95);
+}
+
+.slider-section {
+    display: inline-block;
+    height: 100%;
+    width: 45vw;
+    background-color: blueviolet;
+    border: #333 1px solid;
+    overflow: hidden;
+    text-align: center;    user-select: none;
+    overflow-x: hidden;
+}
+
+.slider-shader {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -100%;
+    /* background-repeat-x: repeat; */
+    /* background-size: contain; */
+    opacity: 0;
+    transition: all 1s ease-out;
+    background: linear-gradient(#00000014, #000000d6);
+}
+
+.slider-bgimg {
+    height: 100%;
+    z-index: 1;
+    transition: all 1s ease-out;
+}
+
+.slider-section:hover.on .slider-bgimg {
+    height: 105%;
+    margin: -5% 0 0 -5%;
+    z-index: 1;
+}
+
+.slider-section:hover.on .slider-shader {
+    height: 110%;
+    top: -110%;
+    opacity: 1;
+}
+.slider-section.on .slider-info-wrapper {
+    opacity: 1;
+}
+.slider-section.on .slider-info-btn {
+    opacity: 1;
+    transform: scale(1);
+}
+.slider-info-wrapper {
+    height: 230px;
+    width: 45vw;
+    z-index: 3;
+    position: absolute;
+    bottom: 10%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: all .25s cubic-bezier(.33, .63, .65, .99);
+    -o-transition: all .25s cubic-bezier(.33, .63, .65, .99);
+    transition: all .25s cubic-bezier(.33, .63, .65, .99);
+    transition: top 1s none;
+    color: #fff;
+    opacity:.5;
+
+}
+
+.slider-info-title {
+    margin: 0 30px;
+    font-size: 30px;
+    font-family: UbisoftSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.25;
+    font-weight: normal;
+    text-shadow: 0 7px 51px rgba(0, 0, 0, .8);
+    z-index: 2;
+}
+
+.slider-info-btn {
+    padding: 6px 12px;
+    opacity: 1;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin: 13%;
+    opacity: 0;
+    transform: scale(.1);
+    transition: all .25s ease-in-out;
+}
+
+
+.slider-info-btn-text {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: space-evenly;
+    -ms-flex: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    z-index: 3;
+}

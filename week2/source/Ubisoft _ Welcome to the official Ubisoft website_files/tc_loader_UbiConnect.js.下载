@@ -1,0 +1,19 @@
+var a = Math.random() * 10000000000000;
+var script = document.createElement("script");
+script.setAttribute("type", "text/javascript");
+var scriptEnvrionment;
+wa_data.nav = wa_data;
+wa_data.nav.siteName = 'Ubisoft Connect';
+if(wa_data.nav.country !=="US" && wa_data.nav.country !=="CA" && wa_data.nav.country !=="MX" && wa_data.nav.country !=="BR") {
+     script.setAttribute("src", "//ubistatic2-a.akamaihd.net/worldwide_analytics/tagcommander/UbisoftConnect/tc_scripts_UbiConnect.js?rand=" + a);
+}else{
+	if (wa_data.nav.environment.toLowerCase() == "preview"){
+		scriptEnvrionment = "uat";
+	} else {
+		scriptEnvrionment = "prod";
+	}
+	script.setAttribute("src", "//ubistatic2-a.akamaihd.net/worldwide_analytics/tagcommander/js/"+scriptEnvrionment+"/wa_tracking.js");
+}
+script.setAttribute("async", "");
+script.async=true;
+document.body.appendChild(script);

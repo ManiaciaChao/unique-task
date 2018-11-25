@@ -1,6 +1,6 @@
+#include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
 
 struct Stack {
     char ctt[32];
@@ -57,26 +57,33 @@ int main() {
     int i, ncount = 0;
     for (i = 0; i < strlen(exp); i++) {
         if (charIsNum(exp[i])) {  // if number
-            printf("%c ", (exp[i]));
-        } else if (charIsOpr(exp[i])) { // if Opr
-            if (isEmpty(&stack)) { // directly push
+            if (i + 1 < strlen(exp)&&charIsNum(exp[i + 1]) ) {
+                printf("%c", (exp[i]));
+            } else {
+                printf("%c ", (exp[i]));
+            }
+
+        } else if (charIsOpr(exp[i])) {  // if Opr
+            if (isEmpty(&stack)) {       // directly push
                 push(&stack, exp[i]);
             } else {
-                while (charIsOpr(top(&stack))) { //pop all opr which is not before the current one
+                while (charIsOpr(top(&stack))) {  // pop all opr which is not
+                                                  // before the current one
                     printf("%c ", pop(&stack));
                 }
                 push(&stack, exp[i]);
             }
-        } else if (charIsOpenParen(exp[i])) { // directly push '('
+        } else if (charIsOpenParen(exp[i])) {  // directly push '('
             push(&stack, exp[i]);
         } else if (charIsCloseParen(exp[i])) {
-            while (!charIsOpenParen(top(&stack))) { // pop all opr until it's nearest '('
+            while (!charIsOpenParen(
+                top(&stack))) {  // pop all opr until it's nearest '('
                 printf("%c ", pop(&stack));
             }
-            pop(&stack); // pop '('
+            pop(&stack);  // pop '('
         }
     }
-    while (!isEmpty(&stack)) { //pop all op
+    while (!isEmpty(&stack)) {  // pop all op
         printf("%c ", pop(&stack));
     }
     printf("\n");

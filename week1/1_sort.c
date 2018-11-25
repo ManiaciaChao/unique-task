@@ -111,7 +111,7 @@ int main() {
     int array[] = {1, 3, 4142, 123, 4, 1, 41, 12315, 31135, 234};
     int i;
     // bubbleSort(array);
-    // mergeSort(array);
+     mergeSort(array);
     // quickSort(array);
     // heapSort(array);
     for (i = 0; i < length(array); i++) {

@@ -1,0 +1,77 @@
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    51% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.console {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    background: #000;
+    color: #fff;
+    line-height: 24px;
+    font-size: 20px;
+    font-family: Consolas;
+    overflow: scroll;
+}
+.console__log-container {
+    width: 100%;
+    min-height: 0;
+}
+.console__log-line { 
+    width: 100%;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+.console__current-line-container {
+    position: relative;
+    display: inline-block;
+    word-break: break-all;
+    width: 100%;
+    margin-top: 24px;
+}
+.console__current-line--prefix {
+    display: inline-block;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+.console__current-line--caret {
+    position: absolute;
+    top: 0px;
+    left: 9ch;
+    animation: blink 1s infinite linear;
+    color: wheat;
+    white-space: pre-wrap;
+    word-break: break-all;
+    vertical-align: text-top;
+}
+.console__current-line--input {
+    position: absolute;
+    top: 0px;
+    display: inline-block;
+    word-break: break-all;
+    vertical-align: text-top;
+    caret-color: #ffffff00;
+}
+
+.console__current-line--input:focus {
+    outline: none;
+}
+.console__current-line:before {
+    content: "root@console > ";
+    display: inline-block;
+}

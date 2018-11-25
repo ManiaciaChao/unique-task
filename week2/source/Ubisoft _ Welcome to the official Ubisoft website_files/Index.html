@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- saved from url=(0138)https://connect.ubi.com/Xdm/Index?appId=f35adcb5-1911-440c-b1c9-48fdc1701c68&xdm_e=https%3A%2F%2Fwww.ubisoft.com&xdm_c=default9625&xdm_p=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>XDM Connector</title>
+</head>
+<body>
+    <h2>XDM connector</h2>
+
+<script async="" src="./tc_UbiWorldWide_1.js.下载"></script><script async="" src="./wa_data_UbiConnect.js.下载"></script><script type="text/javascript">
+    var wa_data = {};
+    wa_data.siteCategory = "Responsive Site";    // Fix value
+    wa_data.environment = "PROD";                    // "Preview" or "Prod"
+
+    //Site Variables
+    wa_data.siteType = "UbisoftConnect";         // Fix value
+    wa_data.siteName = "Ubisoft connect";   // Name of the site which calls the Ubisoft Connect (cf. Last Slide)
+    wa_data.genomeID = "f35adcb5-1911-440c-b1c9-48fdc1701c68";                              // Genome ID - depends on the game
+
+    //Pages Variables
+    wa_data.siteSection = "Account Pages";                             // cf. Tracking Plan
+    wa_data.siteSubSection = "";                       // cf. Tracking Plan //empty for sdk
+    wa_data.pageName = "_nopage";                             // cf. Tracking Plan   _nopage for empty -- sdk only
+    wa_data.errortype = "";                               // cf. Tracking Plan
+
+
+//User Variables
+    wa_data.country = "CN";                                  // FR/DE/IT/ES...
+    wa_data.language = "en-US";                               // fr/de/it/es...
+    wa_data.doNotTrack = "";                          // "ACTIVE" if tuerned on or "NOT_ACTIVE"
+    wa_data.appID = "f35adcb5-1911-440c-b1c9-48fdc1701c68";                                 // Empty if not connected, or if connected, ex "8b8dbe14-a6fd-43c5-9208-93911160a9d2"
+    //wa_data.doNotAttach = true
+
+
+var a = Math.random() * 10000000000000;
+
+var script = document.createElement("script");
+script.setAttribute("type", "text/javascript");
+script.setAttribute("src", "https://ubistatic2-a.akamaihd.net/worldwide_analytics/tagcommander/UbisoftConnect/tc_loader_UbiConnect.js");
+document.body.appendChild(script);
+
+</script><script type="text/javascript" src="./tc_loader_UbiConnect.js.下载"></script>
+
+
+    
+
+    
+    <script src="./jquery-1.11.1.min.js.下载"></script>
+    <script src="./jquery.cookie.min.js.下载"></script>
+    <script src="./easyXDM.min.js.下载"></script>
+<script src="./uplay_xdm96.min.js.下载"></script>
+                                            
+    <script type="text/javascript">
+        uplay.init("https://public-ubiservices.ubi.com/", "/Scripts/name.html", "/Scripts/easyxdm.swf", [ "*.ace-preprod.com", "*.acinitiates.com", "*.airbook.bmonkeys.net", "*.airmecharena.com", "*.aldilife.com", "*.amazonaws.com", "*.amd4u.com", "*.amdrewards.com", "*.anno-union.com", "*.anno-union.de", "*.assassinscreed.com", "*.barbezc-3.desktop.amazon.com", "*.betc.fr", "*.bgegame.com", "*.blitzfunke.bmonkeys.net", "*.bmonkeys.net", "*.cburnham-uplay-dot-hr-humblebundle.appspot.com", "*.ccdagency.com", "*.chrono.gg", "*.demandware.net", "*.dev.stinkdigital.fr", "*.diesiedler.de", "*.dlgamer.com", "*.dlh.net", "*.endwaronline.com", "*.equideow.com", "*.exertisztorm.net", "*.fanatical.com", "*.farcry.stinkdigital.com", "*.firebaseapp.com", "*.fiveanddone.com", "*.game.es", "*.gamersgate.co.uk", "*.gamersgate.com", "*.gamesplanet.com", "*.gamesrepublic.com", "*.geforce.com", "*.geforcenow.com", "*.genbagames.com", "*.ghostrecon.com", "*.greatgames.com.cy", "*.greenmangaming.com", "*.hitrecord.org", "*.hookedonvr.com", "*.howrse.co.uk", "*.howrse.com", "*.howrse.de", "*.humblebundle.com", "*.indiegala.com", "*.ivt-dev.com", "*.jdwc.stage.webedia.io", "*.justdance.com", "*.justdancelive.com", "*.justdancenow.com", "*.justdanceworld.com", "*.justdanceworldcup.com", "*.maestro.io", "*.muxy.io", "*.mybigcommerce.com", "*.nexway.build", "*.nexway.com", "*.nvidia.com", "*.origin.com", "*.ozen-retail.appspot.com", "*.ozen-testing.appspot.com", "*.playgames.dk", "*.popworldwide.com", "*.preprod-ac.60fps.fr", "*.presencepg.com", "*.presta-concept.net", "*.privatelabelvr.net", "*.prod.sinfin.fr", "*.production-dc.com", "*.qmo.io", "*.rainbowleaks.org", "*.sanitytests.nxtld", "*.shapeupcoach.com", "*.shield.com", "*.springboardvr.com", "*.startselect.com", "*.startselect.local", "*.survey.clicktools.com", "*.surveys.eu.qualtrics.com", "*.synthesisvr.com", "*.telechargement.fr", "*.test-reload-nginx", "*.thecrew-hub.com", "*.thesettlers.com", "*.thesettlers.fr", "*.thesettlers-alliance.com", "*.this.is.a.ubi.test.domain", "*.trackmania.com", "*.twitch.amazon.com", "*.twitch.integ.amazon.com", "*.twitch-preprod.amazon.com", "*.u92clients.com", "*.ubi.com", "*.ubisoft.com", "*.ubisoft.onbe", "*.ubisoft.org", "*.Ubisoft.ubisoftclub", "*.ubiworkshop.com", "*.uhrmanufaktur.de", "*.uplay.com", "*.watchdogs.com", "*.websizing.com"], function () {
+            uplay.country = 'CN';
+            if (!wa_data) {
+                wa_data = {};
+            }
+            wa_data.doNotAttach = 'true';
+        });
+        
+    </script>
+
+
+<script type="text/javascript" src="./tc_scripts_UbiConnect.js.下载" async=""></script></body></html>

@@ -1,0 +1,94 @@
+.game-wrapper {
+    height: 680px;
+    display: grid;
+    grid: repeat(2, 320px) / auto-flow 288px;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.game-wrapper.bounce {
+    transition: margin-left 0.75s cubic-bezier(.3, .8, .1, .95);
+}
+
+.game-card {
+    padding: 0 11px;
+    margin: 0;
+    height: 238px;
+    width: 288px;
+    overflow: initial;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #f8f8f8;
+}
+
+.game-card-shadow {
+    width: 100%;
+}
+
+.game-card-img {
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.game-card-img img {
+    width: 100%;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.game-card-info {
+    display: flex;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    position: relative;
+    height: 120px;
+    background: #fff;
+    padding: 10px;
+}
+
+.game-card-title {
+    margin-top: 0;
+    font-family: UbisoftSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: .4em;
+    color: #000;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: -.02em;
+    font-family: UbisoftSans-Bold, UbisoftSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding-bottom: 5px;
+    line-height: 1;
+    /*font-size: 16px;*/
+    font-size: 20px;
+}
+
+.game-card-container {
+    text-align: center;
+    position: relative;
+}
+
+.game-card-btn {
+    display: inline-block;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    min-width: 182px;
+    margin-top: 0;
+    font-family: UbisoftSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    font-size: 15px;
+    background-color: #ffa400;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    -webkit-transition: all .25s cubic-bezier(.33, .63, .65, .99);
+    -o-transition: all .25s cubic-bezier(.33, .63, .65, .99);
+    transition: all .25s cubic-bezier(.33, .63, .65, .99);
+    position: relative;
+}

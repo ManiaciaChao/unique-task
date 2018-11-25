@@ -1,0 +1,18 @@
+@keyframes fade {
+    0% {
+    opacity: 0; /*初始状态 透明度为0*/
+    }
+    50% {
+    opacity: 0; /*中间状态 透明度为0*/
+    }
+    100% {
+    opacity: 1; /*结尾状态 透明度为1*/
+    }
+}
+
+button,a,li {
+    transition: all .2s ease-in-out;
+}
+button:hover,li:hover,a:hover {
+    color: #eee!important;
+}

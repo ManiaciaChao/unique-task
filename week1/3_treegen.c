@@ -108,8 +108,8 @@ void enQueue(struct Queue *q, BinTree *k) {
     struct QNode *temp = newQNode(k);
 
     // if (isQEmpty(&q)) {
-    if (q->rear ==
-        NULL) {  // if the queue is empty, its rear and front are all empty
+    if (q->rear == NULL) {
+        // if the queue is empty, its rear and front are all empty
         q->front = q->rear = temp;
         return;
     }
